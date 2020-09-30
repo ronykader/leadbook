@@ -15,11 +15,19 @@
       DB_PASSWORD=*****
 ##### 3. Need to add client/frontend project's Home URL like: 
       FRONTEND_HOME_URL=http://leadbook.w3zones.com
-##### 4. Then run php artisan config:cache like:
+##### 4. Need to add mail server/SMTP info like: 
+      MAIL_MAILER=smtp
+      MAIL_HOST=smtp.mailtrap.io
+      MAIL_PORT=2525
+      MAIL_USERNAME=****************
+      MAIL_PASSWORD=****************
+      MAIL_ENCRYPTION=tls
+      MAIL_FROM_ADDRESS="no-replay@leadbook.com"
+##### 5. Then run php artisan config:cache like:
       php artisan config:cache
-##### 5. Need to run php artisan migrate command for create essentials table. like: 
+##### 6. Need to run php artisan migrate command for create essentials table. like: 
       php artisan migrate
-##### 6. For random company generated need to run php artisan db:seed command like:
+##### 7. For random company generated need to run php artisan db:seed command like:
       php artisan db:seed
 
 
