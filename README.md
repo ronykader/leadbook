@@ -15,7 +15,7 @@
       DB_PASSWORD=*****
 ##### 3. Need to add client/frontend project's Home URL like: 
       FRONTEND_HOME_URL=http://leadbook.w3zones.com
-##### 4. Need to add mail server/SMTP info like: 
+##### 4. Need to add mail-server/SMTP info like: 
       MAIL_MAILER=smtp
       MAIL_HOST=smtp.mailtrap.io
       MAIL_PORT=2525
