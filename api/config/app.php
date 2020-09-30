@@ -22,7 +22,6 @@ return [
     |
     */
     'frontend_home_url'  => env('FRONTEND_HOME_URL','http://leadbook.w3zones.com'),
-    'frontend_login_url' => env('FRONTEND_LOGIN_URL','http://leadbook.w3zones.com/login'),
     /*
     |--------------------------------------------------------------------------
     | Application Environment
