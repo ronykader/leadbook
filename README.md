@@ -6,7 +6,6 @@
 
 
 ## Project Setup (API)
---------------------------------------------------------------------------
 ##### 1. Need to go api directory and composer update
       composer update
 ##### 2. Need to set Database information in .env file like:
@@ -32,7 +31,6 @@
 
 
 ## Project Setup (Clients/Frontend)
---------------------------------------------------------------------------
 ##### 1. Need to change api base url in clients/src/main.js like: 
          axios.defaults.baseURL = 'http://leadbook.w3zones.com/api/api'
 ##### 2. Need to go Clients directory and run npm run serve or if you want build just need to npm run build like:
