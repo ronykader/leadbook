@@ -15,6 +15,7 @@ require('@/store/subscribe')
 Vue.config.productionTip = false
 
 
+// localStorage and reauthenticating 
 store.dispatch('auth/attempted', localStorage.getItem('token')).then(() => {
 
   new Vue({

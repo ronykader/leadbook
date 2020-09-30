@@ -5,10 +5,6 @@
             <h2 class="title mt-5">Favorite Company List</h2>
 
             <nav class="panel">
-                <div class="panel-block">
-                    <p class="control has-icons-left"><input class="input" placeholder="Search Company" type="text"> 
-                    <span class="icon is-left"><i aria-hidden="true" class="fa fa-search"></i></span></p>
-                </div>
                 <div class="panel-block" v-for="(company, index) in companyList" :key="index">
                     <div class="column is-6">
                         <div class=""><b>Name: </b>{{ company.name }}</div>
@@ -54,6 +50,12 @@
                 let response = await axios.get('/my-favorites');
                 this.companyList = response.data.data
           
+            },
+            // search company List
+            async searchCompany() {
+                let response = await axios.get('/company/search?q='+this.search);
+                this.companyList = response.data.data
+
             }
         }
     }

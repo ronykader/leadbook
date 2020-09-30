@@ -22,6 +22,7 @@ export default{
         }
     },
     actions: {
+        
         async logIn({dispatch},Credential) {
             let response = await axios.post('/auth/login',Credential)
             return dispatch('attempted',response.data.token)
@@ -29,6 +30,7 @@ export default{
 
         async attempted({commit, state},token) {
             if( token ) {
+                // set token after successfully login
                 commit('SET_TOKEN',token)
             }
 
@@ -38,14 +40,14 @@ export default{
 
             try {
                 let response = await axios('/auth/me')
-
+                // set user data after successfully login
                 commit('SET_USER',response.data)
             } catch (e) {
                 commit('SET_TOKEN',null)
                 commit('SET_USER',null)
             }
         },
-
+        // User logout and tokan & user unset
         logOut({commit}) {
             return axios.post('/auth/logout').then(()=>{
                 commit('SET_TOKEN',null)
